@@ -47,7 +47,7 @@ export default function WorkerList() {
   return (
     <div style={gradientStyle}>
     <div className="container py-5">
-      <h1 style={styles.heading} className="text-center">Popular Dishes</h1>
+      <h1 style={styles.heading} className="text-center">Worker List</h1>
       <div className="row row-cols-1 row-cols-md-3 g-4 py-5">
         <div className="col py-4 px-4">
           <div className="card" style={styles.card}>

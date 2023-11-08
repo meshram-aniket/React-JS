@@ -1,13 +1,19 @@
 import React from "react";
+import { useState } from "react";
 
 export default function Login() {
   const gradientStyle = {
     background: "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)",
     height: "100vh",
   };
-  return (
-    
 
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  return (
     <>
       {/* <button
         type="button"
@@ -17,8 +23,6 @@ export default function Login() {
       >
         Launch demo modal
       </button> */}
-
-
 
       {/* Login Modal */}
       <div
@@ -52,7 +56,7 @@ export default function Login() {
                     type="email"
                     id="form2Example1"
                     className="form-control"
-                    style={{border: "solid #d4d4d4 1px"}}
+                    style={{ border: "solid #d4d4d4 1px" }}
                   />
                 </div>
                 {/* Password input */}
@@ -61,10 +65,12 @@ export default function Login() {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={showPassword ? 'text' : 'password'}
                     id="form2Example2"
                     className="form-control"
-                    style={{border: "solid #d4d4d4 1px"}}
+                    style={{ border: "solid #d4d4d4 1px" }}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 {/* 2 column grid layout for inline styling */}
@@ -78,12 +84,13 @@ export default function Login() {
                         defaultValue=""
                         id="form2Example31"
                         defaultChecked=""
+                        onClick={togglePasswordVisibility}
                       />
                       <label
                         className="form-check-label"
                         htmlFor="form2Example31"
                       >
-                        Remember me
+                        {showPassword ? "Hide Password" : "Show Password"}
                       </label>
                     </div>
                   </div>
@@ -143,6 +150,7 @@ export default function Login() {
           </div>
         </div>
       </div>
+
       {/* Register Modal */}
       {/* Login Modal */}
       <div
@@ -208,7 +216,7 @@ export default function Login() {
                     type="text"
                     id="registerName"
                     className="form-control"
-                    style={{border: "solid #d4d4d4 1px"}}
+                    style={{ border: "solid #d4d4d4 1px" }}
                   />
                 </div>
                 {/* Username input */}
@@ -220,7 +228,7 @@ export default function Login() {
                     type="text"
                     id="registerUsername"
                     className="form-control"
-                    style={{border: "solid #d4d4d4 1px"}}
+                    style={{ border: "solid #d4d4d4 1px" }}
                   />
                 </div>
                 {/* Email input */}
@@ -232,7 +240,7 @@ export default function Login() {
                     type="email"
                     id="registerEmail"
                     className="form-control"
-                    style={{border: "solid #d4d4d4 1px"}}
+                    style={{ border: "solid #d4d4d4 1px" }}
                   />
                 </div>
                 {/* Password input */}
@@ -244,7 +252,7 @@ export default function Login() {
                     type="password"
                     id="registerPassword"
                     className="form-control"
-                    style={{border: "solid #d4d4d4 1px"}}
+                    style={{ border: "solid #d4d4d4 1px" }}
                   />
                 </div>
                 {/* Repeat Password input */}
@@ -259,7 +267,7 @@ export default function Login() {
                     type="password"
                     id="registerRepeatPassword"
                     className="form-control form-floating"
-                    style={{border: "solid #d4d4d4 1px"}}
+                    style={{ border: "solid #d4d4d4 1px" }}
                   />
                 </div>
                 {/* Checkbox */}
