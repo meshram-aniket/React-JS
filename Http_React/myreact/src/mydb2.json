@@ -1,0 +1,30 @@
+{
+  "Aniket": [
+    {
+      "id": 1,
+      "name": "aniket",
+      "email": "abc@gmail.com",
+      "phone": 345
+    },
+    {
+      "id": 2,
+      "name": "Deepika",
+      "email": "deep@gmail.com",
+      "phone": "",
+      "username": "566"
+    },
+    {
+      "id": 3,
+      "name": "",
+      "email": "",
+      "phone": ""
+    },
+    {
+      "id": 4,
+      "name": "priya",
+      "email": "",
+      "phone": "",
+      "username": "56778"
+    }
+  ]
+}

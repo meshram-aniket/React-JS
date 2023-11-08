@@ -1,0 +1,5 @@
+--fetching 
+
+ step1:- npm install axios  , json-server
+ step2:- json fake api
+ step3:- dummy.json or fake store
